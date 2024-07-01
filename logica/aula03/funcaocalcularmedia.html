@@ -4,15 +4,31 @@
     <title>Tutorial de Alert em JavaScript - Linha de Código</title>
     <link rel="stylesheet" href="./styles.css" />
     <script>
-      function calcularAreaTerreno(x, y, z) {
-        let media  = (x + y + z) /3 
-        console.log("O aluno ficou" + " " + media + " " + "de média!");   
-        }  
+      
+      function calcularMedia(x, y, z) {    
+      return (x + y + z) /3 
+      }
+
+          let nota1 = parseInt(prompt("Informe a primeira nota: "));
+          let nota2 = parseInt(prompt("Informe a segunda nota: "));
+          let nota3 = parseInt(prompt("Informe a terceira nota: "));
+    
+          let media1 = calcularMedia (nota1, nota2, nota3);
+
+          if (media1 >= 7) {
+            alert("A Média do aluno foi" + "  " + Math.round(media1) + "  " + "O aluno foi Aprovado")}
+             else{
+               alert("A Média do aluno foi" + "  " + Math.round(media1) + "  " + "O aluno foi Reprovado!")}   
+             
+  
     </script>
   </head>
   <body>
     <div class="center">
-      <input type="button" class="teste" onclick="calcularAreaTerreno(6,6,6)" value="Executar" />
+     
+      
+      <input type="button" class="teste" onclick="calcularMedia(nota1, nota2, nota3)" value="Calcular a nota"/>
+    
     </div>
   </body>
 </html>
